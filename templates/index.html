@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FasterFit Stock Tool</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #222;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .file-input {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #fafafa;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .label {
+            font-size: 13px;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>FASTERFIT STOCK REORDER TOOL</h2>
+
+    <form action="/process" method="post" enctype="multipart/form-data">
+
+        <div class="file-input">
+            <label class="label">Sales File</label>
+            <input type="file" name="sales" required>
+        </div>
+
+        <div class="file-input">
+            <label class="label">Stock File</label>
+            <input type="file" name="stock" required>
+        </div>
+
+        <button type="submit">Generate Reorder Sheet</button>
+    </form>
+</div>
+
+</body>
+</html>
