@@ -54,7 +54,8 @@ def clean_item_names(df):
         .str.strip()
 
         # remove prefix up to first hyphen only
-        .str.replace(r'^.*?-\s*', '', regex=True)
+        .str.replace(r'^.{1,10}-\s*', '', regex=True)
+
 
         # normalize multiple spaces
         .str.replace(r'\s+', ' ', regex=True)
